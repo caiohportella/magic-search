@@ -40,7 +40,7 @@ const Page = async ({ searchParams }: PageProps) => {
     )
     .limit(3);
 
-  if (products.length < 3) {
+  if (products.length < 6) {
     const vector = await vectorize(query);
 
     const res = await index.query({
